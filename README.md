@@ -1,3 +1,5 @@
+
+
 # PayFlow
 
 Simple hosted payments for small businesses.
@@ -22,6 +24,13 @@ Small businesses need a fast, simple way to get paid. Existing options are often
 
 PayFlow starts as a hosted payment link product and evolves into a provider-agnostic payments orchestration layer.
 
-## Status
+## Project Status
 
-In active development.
+PayFlow is currently in active development.
+
+I'm building this in the open to explore:
+- Simple payments for small businesses
+- Payment provider abstraction
+- Checkout UX and conversion
+
+Feedback is welcome, but the current focus is on a tight MVP (hosted payment links with Stripe).
