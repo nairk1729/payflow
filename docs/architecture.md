@@ -53,7 +53,7 @@ Stripe (v1)
 ## 4. Detailed Architecture Diagram
 
 ```mermaid
-graph TD
+flowchart TD
 A["Customer opens PayFlow payment link"] --> B["Frontend Checkout Page"]
 B --> C["PayFlow Backend API"]
 C --> D["Payment Link Service"]
@@ -72,8 +72,7 @@ N --> P["Create Transaction Record"]
 O --> Q[("Database")]
 P --> Q
 C --> Q
-```
-
+``` 
 5. Main Components
 Frontend Checkout Page
 
