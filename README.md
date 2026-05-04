@@ -24,6 +24,10 @@ Small businesses need a fast, simple way to get paid. Existing options are often
 
 PayFlow starts as a hosted payment link product and evolves into a provider-agnostic payments orchestration layer.
 
+## Architecture
+
+![PayFlow Architecture](diagrams/architecture-diagram.png)
+
 ## Project Status
 
 PayFlow is currently in active development.
