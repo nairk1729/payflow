@@ -28,6 +28,12 @@ PayFlow starts as a hosted payment link product and evolves into a provider-agno
 
 ![PayFlow Architecture](diagrams/architecture-diagram.png)
 
+## 🎨 Wireframes
+
+### Create Payment Link (Merchant)
+This screen allows small business owners to generate a payment link by entering service details.
+![Create Payment Link](design/wireframes/create-payment-link.png)
+
 ## Project Status
 
 PayFlow is currently in active development.
