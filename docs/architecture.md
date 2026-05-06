@@ -54,25 +54,43 @@ Stripe (v1)
 
 ```mermaid
 flowchart TD
-A["Customer opens PayFlow payment link"] --> B["Frontend Checkout Page"]
+
+%% User Layer
+A["Customer clicks PayFlow payment link"]
+
+%% Frontend
+A --> B["Frontend Checkout Page"]
+
+%% Backend Entry
 B --> C["PayFlow Backend API"]
+
+%% Core Services
 C --> D["Payment Link Service"]
 C --> E["Payment Session Service"]
 C --> F["Transaction Service"]
+
+%% Payment Processing
 E --> G["Provider Adapter Layer"]
 G --> H["Stripe Adapter"]
-G --> I["Future Paytm Adapter"]
-G --> J["Future Provider Adapter"]
-H --> K["Stripe Checkout"]
-K --> L["Customer completes payment"]
-L --> M["Stripe Webhook"]
-M --> N["Webhook Handler"]
-N --> O["Update Payment Session"]
-N --> P["Create Transaction Record"]
-O --> Q[("Database")]
-P --> Q
-C --> Q
+H --> I["Stripe Checkout"]
+
+%% Payment Completion
+I --> J["Customer completes payment"]
+
+%% Webhook Flow
+J --> K["Stripe Webhook"]
+K --> L["Webhook Handler"]
+
+%% Backend Updates
+L --> M["Update Payment Session"]
+L --> N["Create Transaction Record"]
+
+%% Database
+M --> O["Database"]
+N --> O
+C --> O
 ``` 
+
 5. Main Components
 Frontend Checkout Page
 
