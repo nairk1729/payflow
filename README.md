@@ -28,6 +28,27 @@ PayFlow starts as a hosted payment link product and evolves into a provider-agno
 
 ![PayFlow Architecture](diagrams/architecture-diagram.png)
 
+## Features
+
+- Create customer payment links
+- Hosted checkout experience
+- Invoice/payment summary
+- Secure checkout messaging
+- Copy/share payment links
+- Optional email receipt field
+- Mobile-friendly payment flow
+
+This helps recruiters quickly understand scope.
+
+## Project Flow
+
+Merchant creates a payment link
+→ Payment link is generated
+→ Merchant shares link with customer
+→ Customer opens hosted checkout page
+→ Customer enters payment details
+→ Payment is completed
+
 ## 🎨 Wireframes
 
 ### Create Payment Link (Merchant)
@@ -40,6 +61,21 @@ This screen allows small business owners to generate a payment link by entering 
 This screen shows the generated payment link and sharing options for merchants.
 
 ![Payment Link Generated](design/wireframes/Payment-Link-Generated.png)
+
+## Customer Checkout Page
+
+Users receiving a payment link are taken to a clean hosted checkout experience with:
+
+- Secure payment messaging
+- Payment summary
+- Card details form
+- CVV and expiry validation fields
+- Optional email receipt
+- Clear primary CTA
+
+### Checkout Experience
+
+![Customer Checkout Page](design/wireframes/customer-checkout-page.png)
 
 ## Project Status
 
