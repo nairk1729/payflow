@@ -49,10 +49,21 @@ Merchant creates a payment link
 → Customer enters payment details
 → Payment is completed
 
+
+## Product Flow
+
+1. Merchant creates a payment link
+2. Payment link is generated and shared
+3. Customer completes secure checkout
+4. Customer receives payment confirmation and receipt
+
+
 ## 🎨 Wireframes
 
 ### Create Payment Link (Merchant)
+
 This screen allows small business owners to generate a payment link by entering service details.
+
 ![Create Payment Link](design/wireframes/create-payment-link.png)
 ---
 
@@ -76,6 +87,10 @@ Users receiving a payment link are taken to a clean hosted checkout experience w
 ### Checkout Experience
 
 ![Customer Checkout Page](design/wireframes/customer-checkout-page.png)
+
+### 4. Payment Confirmation
+
+![Payment Confirmation](design/wireframes/payment-confirmation.png)
 
 ## Project Status
 
