@@ -88,9 +88,14 @@ Users receiving a payment link are taken to a clean hosted checkout experience w
 
 ![Customer Checkout Page](design/wireframes/customer-checkout-page.png)
 
-### 4. Payment Confirmation
+### Payment Confirmation
 
 ![Payment Confirmation](design/wireframes/payment-confirmation.png)
+
+## Interactive Prototype
+
+[Figma Prototype](https://www.figma.com/proto/NcC501i8FuWXN8eEjLXKDD/Payflow-Wireframes?node-id=176-42&t=Rwi5VnO79G4hDEfN-1)
+
 
 ## Project Status
 
@@ -102,3 +107,7 @@ I'm building this in the open to explore:
 - Checkout UX and conversion
 
 Feedback is welcome, but the current focus is on a tight MVP (hosted payment links with Stripe).
+
+## Author
+
+Designed and developed by Kavitha Nair.
