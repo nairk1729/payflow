@@ -2,7 +2,7 @@
 
 # PayFlow
 
-Simple hosted payments for small businesses.
+Hosted payment links and checkout flows for small businesses.
 
 ## What is PayFlow?
 
@@ -10,15 +10,23 @@ PayFlow helps small business owners create a payment link and accept payments wi
 
 ## Why I’m building this
 
-Small businesses need a fast, simple way to get paid. Existing options are often too heavy, too technical, or too limited.
+Existing payment tools are often fragmented, overly complex, or designed for larger businesses. PayFlow focuses on a lightweight, hosted checkout experience for small merchants.
 
 ## MVP
 
-- Merchant onboarding
-- Stripe integration
 - Payment link generation
-- Hosted checkout page
+- Hosted checkout experience
+- Stripe-powered payment processing
+- Payment confirmation flow
 - Basic payment tracking
+
+## Tech Stack
+
+- Figma (wireframes & prototype)
+- GitHub
+- Planned: React / Next.js
+- Planned: Node.js backend APIs
+- Planned: Stripe integration
 
 ## Vision
 
@@ -38,24 +46,28 @@ PayFlow starts as a hosted payment link product and evolves into a provider-agno
 - Optional email receipt field
 - Mobile-friendly payment flow
 
-This helps recruiters quickly understand scope.
-
-## Project Flow
-
-Merchant creates a payment link
-→ Payment link is generated
-→ Merchant shares link with customer
-→ Customer opens hosted checkout page
-→ Customer enters payment details
-→ Payment is completed
-
+## Product Flow
 
 ## Product Flow
 
-1. Merchant creates a payment link
-2. Payment link is generated and shared
-3. Customer completes secure checkout
-4. Customer receives payment confirmation and receipt
+Merchant creates payment link  
+→ Payment link generated  
+→ Customer opens hosted checkout  
+→ Customer completes payment  
+→ Payment confirmation displayed
+
+## Roadmap
+
+- Backend payment APIs
+- Stripe webhook handling
+- Merchant dashboard
+- Email receipt templates
+- Mobile responsive UI
+- Multi-provider payment routing
+
+## Interactive Prototype
+
+[Figma Prototype](https://www.figma.com/proto/NcC501i8FuWXN8eEjLXKDD/Payflow-Wireframes?node-id=176-42&t=Rwi5VnO79G4hDEfN-1)
 
 
 ## 🎨 Wireframes
@@ -92,11 +104,6 @@ Users receiving a payment link are taken to a clean hosted checkout experience w
 
 ![Payment Confirmation](design/wireframes/payment-confirmation.png)
 
-## Interactive Prototype
-
-[Figma Prototype](https://www.figma.com/proto/NcC501i8FuWXN8eEjLXKDD/Payflow-Wireframes?node-id=176-42&t=Rwi5VnO79G4hDEfN-1)
-
-
 ## Project Status
 
 PayFlow is currently in active development.
@@ -106,7 +113,7 @@ I'm building this in the open to explore:
 - Payment provider abstraction
 - Checkout UX and conversion
 
-Feedback is welcome, but the current focus is on a tight MVP (hosted payment links with Stripe).
+The current focus is building a tight MVP around hosted payment links and checkout flows.
 
 ## Author
 
