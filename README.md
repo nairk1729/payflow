@@ -32,6 +32,10 @@ Existing payment tools are often fragmented, overly complex, or designed for lar
 
 PayFlow starts as a hosted payment link product and evolves into a provider-agnostic payments orchestration layer.
 
+Longer term, the platform will expand into operational intelligence for payments — helping merchants identify failed payments, overdue invoices, payout delays, and transaction anomalies through AI-assisted operational workflows.
+
+The initial focus remains a tight MVP centered on hosted payment flows and Stripe integration.
+
 ## Architecture
 
 ![PayFlow Architecture](diagrams/architecture-diagram.png)
@@ -46,7 +50,18 @@ PayFlow starts as a hosted payment link product and evolves into a provider-agno
 - Optional email receipt field
 - Mobile-friendly payment flow
 
-## Product Flow
+## Future Operational Intelligence
+
+Post-MVP, PayFlow will explore AI-assisted operational tooling for payment workflows, including:
+
+- Payment failure insights
+- Overdue invoice monitoring
+- Payout delay summaries
+- Transaction anomaly detection
+- Merchant operational alerts
+- Natural-language payment operations queries
+
+The goal is not autonomous financial decision-making, but improving visibility and operational efficiency for small businesses managing payments.
 
 ## Product Flow
 
@@ -112,6 +127,8 @@ I'm building this in the open to explore:
 - Simple payments for small businesses
 - Payment provider abstraction
 - Checkout UX and conversion
+- Operational intelligence for payments
+- AI-assisted payment operations workflows
 
 The current focus is building a tight MVP around hosted payment links and checkout flows.
 
