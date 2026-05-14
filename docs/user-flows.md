@@ -1,8 +1,8 @@
-# PayFlow — User Flows
+# Invopaid — User Flows
 
 ## 1. Purpose
 
-This document outlines the core user journeys for PayFlow.
+This document outlines the core user journeys for Invopaid.
 
 The goal is to clearly define:
 - how merchants use the product
@@ -41,7 +41,7 @@ Enable a merchant to sign up and connect a payment provider.
 ### Flow
 
 ```text
-Visit PayFlow landing page
+Visit Invopaid landing page
    ↓
 Click "Get Started"
    ↓
@@ -51,6 +51,6 @@ Login to dashboard
    ↓
 Connect Stripe account
    ↓
-Redirect back to PayFlow
+Redirect back to Invopaid
    ↓
 Connection successful
