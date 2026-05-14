@@ -82,7 +82,7 @@ Merchant creates payment link
 
 ## Interactive Prototype
 
-[Figma Prototype](https://www.figma.com/proto/NcC501i8FuWXN8eEjLXKDD/Payflow-Wireframes?node-id=176-42&t=Rwi5VnO79G4hDEfN-1)
+[Figma Prototype](https://www.figma.com/proto/NcC501i8FuWXN8eEjLXKDD/Payflow-Wireframes?node-id=199-74&p=f&t=iJgwHwrQ0h33of6y-1&scaling=min-zoom&content-scaling=fixed&page-id=164%3A3&starting-point-node-id=199%3A74)
 
 
 ## 🎨 Wireframes
@@ -91,14 +91,14 @@ Merchant creates payment link
 
 This screen allows small business owners to generate a payment link by entering service details.
 
-![Create Payment Link](design/wireframes/create-payment-link.png)
+![Create Payment Link](design/wireframes/Invopaid-Create-Payment-Link.png)
 ---
 
 ### Payment Link Generated
 
 This screen shows the generated payment link and sharing options for merchants.
 
-![Payment Link Generated](design/wireframes/Payment-Link-Generated.png)
+![Payment Link Generated](design/wireframes/Invopaid-Payment-Link-Card.png)
 
 ## Customer Checkout Page
 
@@ -117,7 +117,7 @@ Users receiving a payment link are taken to a clean hosted checkout experience w
 
 ### Payment Confirmation
 
-![Payment Confirmation](design/wireframes/payment-confirmation.png)
+![Payment Confirmation](design/wireframes/Invopaid-Payment-Confirmation-Card.png)
 
 ## Project Status
 
