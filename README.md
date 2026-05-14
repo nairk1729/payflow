@@ -1,16 +1,16 @@
 
 
-# PayFlow
+# Invopaid
 
 Hosted payment links and checkout flows for small businesses.
 
-## What is PayFlow?
+## What is Invopaid?
 
-PayFlow helps small business owners create a payment link and accept payments without building complex checkout flows.
+Invopaid helps small business owners create a payment link and accept payments without building complex checkout flows.
 
 ## Why I’m building this
 
-Existing payment tools are often fragmented, overly complex, or designed for larger businesses. PayFlow focuses on a lightweight, hosted checkout experience for small merchants.
+Existing payment tools are often fragmented, overly complex, or designed for larger businesses. Invopaid focuses on a lightweight, hosted checkout experience for small merchants.
 
 ## MVP
 
@@ -30,7 +30,7 @@ Existing payment tools are often fragmented, overly complex, or designed for lar
 
 ## Vision
 
-PayFlow starts as a hosted payment link product and evolves into a provider-agnostic payments orchestration layer.
+Invopaid starts as a hosted payment link product and evolves into a provider-agnostic payments orchestration layer.
 
 Longer term, the platform will expand into operational intelligence for payments — helping merchants identify failed payments, overdue invoices, payout delays, and transaction anomalies through AI-assisted operational workflows.
 
@@ -38,7 +38,7 @@ The initial focus remains a tight MVP centered on hosted payment flows and Strip
 
 ## Architecture
 
-![PayFlow Architecture](diagrams/architecture-diagram.png)
+![Invopaid Architecture](diagrams/architecture-diagram.png)
 
 ## Features
 
@@ -52,7 +52,7 @@ The initial focus remains a tight MVP centered on hosted payment flows and Strip
 
 ## Future Operational Intelligence
 
-Post-MVP, PayFlow will explore AI-assisted operational tooling for payment workflows, including:
+Post-MVP, Invopaid will explore AI-assisted operational tooling for payment workflows, including:
 
 - Payment failure insights
 - Overdue invoice monitoring
@@ -121,7 +121,7 @@ Users receiving a payment link are taken to a clean hosted checkout experience w
 
 ## Project Status
 
-PayFlow is currently in active development.
+Invopaid is currently in active development.
 
 I'm building this in the open to explore:
 - Simple payments for small businesses
