@@ -14,6 +14,19 @@ app.get("/health", (req, res) => {
 app.post("/payment-links", (req, res) => {
   const { businessName, serviceTitle, description, amount, currency } = req.body;
 
+    if (!businessName || !serviceTitle || !amount) {
+    return res.status(400).json({
+      error: "Missing required fields",
+      requiredFields: ["businessName", "serviceTitle", "amount"]
+    });
+  }
+
+if (!businessName || !serviceTitle || amount === undefined) {
+    return res.status(400).json({
+      error: "Amount must be a number greater than 0"
+    });
+  }
+
   const paymentLink = {
     id: `plink_${Date.now()}`,
     businessName,
