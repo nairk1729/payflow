@@ -1,6 +1,6 @@
 ## 1. Purpose
 
-PayFlow is a lightweight hosted payments platform for small businesses. Merchants create payment links, customers pay through a hosted checkout page, and PayFlow tracks payment outcomes through provider webhooks.
+Invopaid is a lightweight hosted payments platform for small businesses. Merchants create payment links, customers pay through a hosted checkout page, and Invopaid tracks payment outcomes through provider webhooks.
 
 The architecture is designed to support a simple MVP first:
 - merchant onboarding
@@ -30,7 +30,7 @@ At the same time, the system is structured to evolve into a provider-agnostic pa
 
 ## 3. High-Level System Design
 
-PayFlow consists of four main layers:
+Invopaid consists of four main layers:
 
 1. **Frontend**
 2. **Backend API**
@@ -56,13 +56,13 @@ Stripe (v1)
 flowchart TD
 
 %% User Layer
-A["Customer clicks PayFlow payment link"]
+A["Customer clicks Invopaid payment link"]
 
 %% Frontend
 A --> B["Frontend Checkout Page"]
 
 %% Backend Entry
-B --> C["PayFlow Backend API"]
+B --> C["Invopaid Backend API"]
 
 %% Core Services
 C --> D["Payment Link Service"]
@@ -133,7 +133,7 @@ Provider Adapter Layer
 
 Abstracts payment provider-specific logic.
 
-This allows PayFlow to start with Stripe while keeping the system flexible enough to support Paytm or other providers later.
+This allows Invopaid to start with Stripe while keeping the system flexible enough to support Paytm or other providers later.
 
 Stripe Adapter
 
@@ -156,7 +156,7 @@ Update payment session status
 Create transaction record
 Database
 
-Stores core PayFlow records:
+Stores core Invopaid records:
 
 Merchants
 Payment Links
@@ -164,7 +164,7 @@ Payment Sessions
 Transactions
 6. Key Design Decision
 
-PayFlow separates:
+Invopaid separates:
 
 Payment Session = payment attempt
 Transaction = final payment outcome
@@ -173,7 +173,7 @@ This keeps the system clean because not every payment attempt becomes a successf
 
 7. Future Expansion
 
-The provider adapter layer allows PayFlow to support:
+The provider adapter layer allows Invopaid to support:
 
 Paytm
 Razorpay
