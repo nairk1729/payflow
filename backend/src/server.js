@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 const paymentLinks = [];
+const transactions = [];
 app.use(express.json());
 
 /* ---------------- HEALTH ROUTE ---------------- */
@@ -66,6 +67,43 @@ app.get("/payment-links/:id", (req, res) => {
   res.json(paymentLink);
 });
 
+/* ---------- CREATE CHECKOUT SESSION ---------- */
+
+app.post("/checkout-session", (req, res) => {
+  const { paymentLinkId } = req.body;
+
+  if (!paymentLinkId) {
+    return res.status(400).json({
+      error: "paymentLinkId is required"
+    });
+  }
+
+  const paymentLink = paymentLinks.find(
+    (link) => link.id === paymentLinkId
+  );
+
+  if (!paymentLink) {
+    return res.status(404).json({
+      error: "Payment link not found"
+    });
+  }
+
+  const transaction = {
+    id: `txn_${Date.now()}`,
+    paymentLinkId: paymentLink.id,
+    amount: paymentLink.amount,
+    currency: paymentLink.currency,
+    status: "pending",
+    checkoutUrl: `https://checkout.invopaid.app/session/${Date.now()}`,
+    createdAt: new Date().toISOString()
+  };
+
+  transactions.push(transaction);
+
+  res.status(201).json({
+    transaction
+  });
+});
 /* ---------------- SERVER START ---------------- */
 
 const PORT = 4000;
