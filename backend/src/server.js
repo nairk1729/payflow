@@ -121,6 +121,34 @@ app.get("/transactions/:id", (req, res) => {
   res.json(transaction);
 });
 
+app.post("/webhooks/payment", (req, res) => {
+  const { transactionId, status } = req.body;
+
+  if (!transactionId || !status) {
+    return res.status(400).json({
+      error: "transactionId and status are required"
+    });
+  }
+
+  const transaction = transactions.find(
+    (txn) => txn.id === transactionId
+  );
+
+  if (!transaction) {
+    return res.status(404).json({
+      error: "Transaction not found"
+    });
+  }
+
+  transaction.status = status;
+  transaction.updatedAt = new Date().toISOString();
+
+  res.json({
+    message: "Transaction updated successfully",
+    transaction
+  });
+});
+
 /* ---------------- SERVER START ---------------- */
 
 const PORT = 4000;
