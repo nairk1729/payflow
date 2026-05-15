@@ -104,6 +104,23 @@ app.post("/checkout-session", (req, res) => {
     transaction
   });
 });
+
+app.get("/transactions/:id", (req, res) => {
+  const { id } = req.params;
+
+  const transaction = transactions.find(
+    (txn) => txn.id === id
+  );
+
+  if (!transaction) {
+    return res.status(404).json({
+      error: "Transaction not found"
+    });
+  }
+
+  res.json(transaction);
+});
+
 /* ---------------- SERVER START ---------------- */
 
 const PORT = 4000;
