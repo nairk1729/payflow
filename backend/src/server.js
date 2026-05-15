@@ -4,12 +4,16 @@ const app = express();
 const paymentLinks = [];
 app.use(express.json());
 
+/* ---------------- HEALTH ROUTE ---------------- */
+
 app.get("/health", (req, res) => {
   res.json({
     status: "ok",
     service: "invopaid-backend"
   });
 });
+
+/* -------- CREATE PAYMENT LINK ROUTE -------- */
 
 app.post("/payment-links", (req, res) => {
   const { businessName, serviceTitle, description, amount, currency } = req.body;
@@ -45,6 +49,24 @@ if (!businessName || !serviceTitle || amount === undefined) {
     url: `https://invopaid.app/pay/${paymentLink.id}`
   });
 });
+
+/* -------- GET PAYMENT LINK BY ID ROUTE -------- */
+
+app.get("/payment-links/:id", (req, res) => {
+  const { id } = req.params;
+
+  const paymentLink = paymentLinks.find((link) => link.id === id);
+
+  if (!paymentLink) {
+    return res.status(404).json({
+      error: "Payment link not found"
+    });
+  }
+
+  res.json(paymentLink);
+});
+
+/* ---------------- SERVER START ---------------- */
 
 const PORT = 4000;
 
