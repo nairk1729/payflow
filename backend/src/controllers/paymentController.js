@@ -24,9 +24,7 @@ function getPaymentLink(req, res) {
   const paymentLink = paymentService.getPaymentLinkById(req.params.id);
 
   if (!paymentLink) {
-    return res.status(404).json({
-      error: "Payment link not found"
-    });
+    return res.status(404).json({ error: "Payment link not found" });
   }
 
   res.json(paymentLink);
@@ -44,9 +42,7 @@ function createCheckoutSession(req, res) {
   const transaction = paymentService.createCheckoutSession(paymentLinkId);
 
   if (!transaction) {
-    return res.status(404).json({
-      error: "Payment link not found"
-    });
+    return res.status(404).json({ error: "Payment link not found" });
   }
 
   res.status(201).json({ transaction });
@@ -56,9 +52,7 @@ function getTransaction(req, res) {
   const transaction = paymentService.getTransactionById(req.params.id);
 
   if (!transaction) {
-    return res.status(404).json({
-      error: "Transaction not found"
-    });
+    return res.status(404).json({ error: "Transaction not found" });
   }
 
   res.json(transaction);
@@ -76,9 +70,7 @@ function handlePaymentWebhook(req, res) {
   const transaction = paymentService.updateTransactionStatus(transactionId, status);
 
   if (!transaction) {
-    return res.status(404).json({
-      error: "Transaction not found"
-    });
+    return res.status(404).json({ error: "Transaction not found" });
   }
 
   res.json({

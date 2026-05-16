@@ -1,15 +1,13 @@
 const { paymentLinks, transactions } = require("../store/memoryStore");
 
 function createPaymentLink(data) {
-  const { businessName, serviceTitle, description, amount, currency } = data;
-
   const paymentLink = {
     id: `plink_${Date.now()}`,
-    businessName,
-    serviceTitle,
-    description,
-    amount,
-    currency: currency || "USD",
+    businessName: data.businessName,
+    serviceTitle: data.serviceTitle,
+    description: data.description,
+    amount: data.amount,
+    currency: data.currency || "USD",
     status: "active",
     createdAt: new Date().toISOString()
   };
@@ -29,9 +27,7 @@ function getPaymentLinkById(id) {
 function createCheckoutSession(paymentLinkId) {
   const paymentLink = getPaymentLinkById(paymentLinkId);
 
-  if (!paymentLink) {
-    return null;
-  }
+  if (!paymentLink) return null;
 
   const transaction = {
     id: `txn_${Date.now()}`,
@@ -55,9 +51,7 @@ function getTransactionById(id) {
 function updateTransactionStatus(transactionId, status) {
   const transaction = getTransactionById(transactionId);
 
-  if (!transaction) {
-    return null;
-  }
+  if (!transaction) return null;
 
   transaction.status = status;
   transaction.updatedAt = new Date().toISOString();
